@@ -19,10 +19,10 @@ time16 = datetime.time(14,13,0)
 time17 = datetime.time(14,15,0)
 time18 = datetime.time(15,0,0)
 
-listOfTimes = [time1, time2, time3, time4, time5, time6, time7, time8, time9, time10
+listOfTimes = [time1, time2, time3, time4, time5, time6, time7, time8, time9, time10,
 time11, time12, time13, time14, time15, time16, time17, time18]
 
-for x in listOfTimes:
+#for x in listOfTimes:
 #Ring bell here.
 
 
