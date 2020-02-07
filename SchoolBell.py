@@ -38,7 +38,7 @@ time15 = datetime.time(13,28,0)
 time16 = datetime.time(14,13,0)
 time17 = datetime.time(15,15,0)
 time18 = datetime.time(13,36,0)
-timeNow = datetime.time(datetime_object.hour, datetime_object.minute,datetime_object.seconds)
+timeNow = datetime.time(datetime_object.hour, datetime_object.minute,datetime_object.second)
 
 listOfTimes = [time1, time2, time3, time4, time5, time6, time7, time8, time9, time10,
 time11, time12, time13, time14, time15, time16, time17, time18]
