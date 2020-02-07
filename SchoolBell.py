@@ -1,7 +1,27 @@
 import datetime
+import pyaudio
+import wave
+import sys
+import time
 
-time1 = datetime.time(8,15,0)
-time2 = datetime.time(8,45,0)
+script, filemame = sys.argv
+
+datetime_object = datetime.datetime.now()
+
+wf = wave.open(sys.argv[1], 'rb')
+
+CHUNK = 1024
+
+p = pyaudio.PyAudio()
+stream = p.open(format = p.get_format_from_width(wf.getsampwidth()),
+                channels = wf.getnchannels(),
+                rate = wf.getframerate(),
+                output = True)
+
+audio = wf.readframes(CHUNK)
+
+time1 = datetime.time(14,5,0)
+time2 = datetime.time(13,54,0)
 time3 = datetime.time(8,47,0)
 time4 = datetime.time(9,46,0)
 time5 = datetime.time(9,49,0)
@@ -16,14 +36,26 @@ time13 = datetime.time(12,41,0)
 time14 = datetime.time(13,26,0)
 time15 = datetime.time(13,28,0)
 time16 = datetime.time(14,13,0)
-time17 = datetime.time(14,15,0)
-time18 = datetime.time(15,0,0)
+time17 = datetime.time(15,15,0)
+time18 = datetime.time(13,36,0)
+timeNow = datetime.time(datetime_object.hour, datetime_object.minute,datetime_object.seconds)
 
 listOfTimes = [time1, time2, time3, time4, time5, time6, time7, time8, time9, time10,
 time11, time12, time13, time14, time15, time16, time17, time18]
 
-#for x in listOfTimes:
-#Ring bell here.
+
+print(timeNow)
+
+
+while True:
+    for x in listOfTimes:
+        if (x == timeNow):
+            print("Success!")
+#            stream.write(audio)
+#            audio = wf.readframes(CHUNK)
+
+
+
 
 
 class TimeStrings:
@@ -45,7 +77,3 @@ tp6 = TimeStrings('fourth period', '11:53 -', '12:38')
 tp7 = TimeStrings('fifth period', '12:41 -', '13:26')
 tp8 = TimeStrings('sixth period', '13:28 -', '14:13')
 tp9 = TimeStrings('seventh period', '14:15 -', '15:00')
-
-tp2.screenOutput()
-
-
