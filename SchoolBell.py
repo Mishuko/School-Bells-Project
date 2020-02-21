@@ -1,11 +1,12 @@
 import datetime
+from tkinter import *
 from playsound import playsound
 import sys
 import time
 
 datetime_object = datetime.datetime.now()
 
-time1 = datetime.time(10,32,0)
+time1 = datetime.time(10,0,0)
 time2 = datetime.time(13,38,20)
 time3 = datetime.time(13,48,30)
 time4 = datetime.time(9,46,0)
@@ -47,6 +48,12 @@ tp6 = TimeStrings('fourth period', '11:53 -', '12:38')
 tp7 = TimeStrings('fifth period', '12:41 -', '13:26')
 tp8 = TimeStrings('sixth period', '13:28 -', '14:13')
 tp9 = TimeStrings('seventh period', '14:15 -', '15:00')
+
+
+
+
+
+
 
 while True:
     datetime_object = datetime.datetime.now()
@@ -92,3 +99,5 @@ while True:
         print(tp17)
     if (time18 == timeNow):
         print(tp18)
+
+    root.mainloop( )
