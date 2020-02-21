@@ -1,11 +1,12 @@
 import datetime
+from tkinter import *
 from playsound import playsound
 import sys
 import time
 
 datetime_object = datetime.datetime.now()
 
-time1 = datetime.time(10,32,0)
+time1 = datetime.time(10,14,10)
 time2 = datetime.time(13,38,20)
 time3 = datetime.time(13,48,30)
 time4 = datetime.time(9,46,0)
@@ -29,24 +30,26 @@ listOfTimes = [time1, time2, time3, time4, time5, time6, time7, time8, time9, ti
 time11, time12, time13, time14, time15, time16, time17, time18]
 
 class TimeStrings:
-    def __init__(self, period, startTime, endTime):
+    def __init__(self, period, startTime, blankSpace, endTime):
         self.period = period
         self.startTime = startTime
+        self.blankSpace = blankSpace
         self.endTime = endTime
 
     def __str__(self):
-        return('It is currently ' + self.period + '. \n' + self.startTime + self.endTime)
+        return('It is currently ' + str(self.period) + '. \n' + str(self.startTime) + self.blankSpace + str(self.endTime))
 
 
-tp1 = TimeStrings('devotions', '8:15 -', '8:45')
-tp2 = TimeStrings('first period', '8:47 -', '9:46')
-tp3 = TimeStrings('second period', '9:49 -', '10:34')
-tp4 = TimeStrings('recess', '10:38 -', '11:05')
-tp5 = TimeStrings('third period', '11:08 -', '11:50')
-tp6 = TimeStrings('fourth period', '11:53 -', '12:38')
-tp7 = TimeStrings('fifth period', '12:41 -', '13:26')
-tp8 = TimeStrings('sixth period', '13:28 -', '14:13')
-tp9 = TimeStrings('seventh period', '14:15 -', '15:00')
+tp1 = TimeStrings('devotions', str(time1), ' - ', time2)
+tp2 = TimeStrings('first period', str(time3), ' - ', time4)
+tp3 = TimeStrings('second period', str(time5), ' - ', time6)
+tp4 = TimeStrings('recess', str(time7), ' - ', time8)
+tp5 = TimeStrings('third period', str(time9), ' - ', time10)
+tp6 = TimeStrings('fourth period', str(time11), ' - ', time12)
+tp7 = TimeStrings('fifth period', str(time13), ' - ', time14)
+tp8 = TimeStrings('sixth period', str(time15), ' - ', time16)
+tp9 = TimeStrings('seventh period', str(time17), ' - ', time18)
+
 
 while True:
     datetime_object = datetime.datetime.now()
