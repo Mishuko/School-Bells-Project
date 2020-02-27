@@ -51,12 +51,12 @@ class TimeStrings:
         self.endTime = endTime
 
     def __str__(self):
-        return('It is currently ' + str(self.period) + '. \n' + str(self.startTime) + self.blankSpace + str(self.endTime))
+        return(str(self.period) + '. \n' + str(self.startTime) + self.blankSpace + str(self.endTime))
 
 
 tp1 = TimeStrings('School door should be open.', str(time1), ' - ', time2)
 tp2 = TimeStrings('Devotions start in 3 minutes.', str(time2), ' - ', time3)
-tp3 = TimeStrings('devotions', str(time3), ' - ', time4)
+tp3 = TimeStrings('We are in devotions.', str(time3), ' - ', time4)
 tp4 = TimeStrings('The first period starts in 2 minutes.', str(time4), ' - ', time5)
 tp5 = TimeStrings('We are in first period.', str(time5), ' - ', time7)
 tp6 = TimeStrings('Second period starts in 2 minutes.', str(time7), ' - ', time8)
